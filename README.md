@@ -144,7 +144,7 @@ const App = () => {
 [almdashif](https://github.com/almdashif)
 
 ## License
-[MIT Licensed](https://github.com/ThakurBallary/react-native-btr/blob/master/LICENSE)
+[MIT Licensed](https://github.com/almdashif/react-native-indicator-kit/blob/main/LICENSE)
 
 
 

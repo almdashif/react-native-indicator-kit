@@ -1,6 +1,6 @@
 {
   "name": "react-native-indicator-kit",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "React Native UI Indicators / Loaders",
   "types": "dist/index.d.ts",
   "main": "src/index.ts",
