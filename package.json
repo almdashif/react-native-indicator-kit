@@ -1,0 +1,40 @@
+{
+  "name": "react-native-indicator-kit",
+  "version": "0.0.2",
+  "description": "React Native UI Indicators / Loaders",
+  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almdashif/react-native-indicator-kit"
+  },
+  "keywords": [
+    "android",
+    "ios",
+    "react-native",
+    "react-native-cli",
+    "react-native-indicator",
+    "react-native-indicators",
+    "react-native-CircularLoader",
+    "react-native-TextLoader",
+    "react-native-EqualizerBarLoader",
+    "react-native-react-native-indicator-kit"
+  ],
+  "author": "Mohammed Ashif AL",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/almdashif/react-native-indicator-kit/issues"
+  },
+  "homepage": "https://github.com/almdashif/react-native-indicator-kit/blob/main/README.md",
+  "devDependencies": {
+    "@react-native/typescript-config": "^0.76.3",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^18.3.12",
+    "@types/react-native": "^0.73.0",
+    "typescript": "^5.7.2"
+  }
+}
