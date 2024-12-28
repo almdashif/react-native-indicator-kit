@@ -1,142 +1,110 @@
-# React Native Indicator Kit <img src="src/Images/tsLogo.png" alt="TS" width="26" />
+#### React Native Skeleton Skimmer <img src="src/Images/tsLogo.png" alt="TS" width="26" />
 
-React Native Indicator Kit :fire: :rocket: :star2:
+A Simple  Skeleton Loader with Skimmer effect in React Native  :fire: :rocket: :star2:
 
-![npm](https://img.shields.io/npm/v/react-native-indicator-kit) ![LICENSE MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)
-
-[![NPM](https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png)](https://www.npmjs.com/package/react-native-indicator-kit/)
+![npm](https://img.shields.io/npm/v/react-native-skeleton-skimmer) ![LICENSE MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)   [![NPM](https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png)](https://www.npmjs.com/package/react-native-skeleton-skimmer/)
 
 
 
-![Loading Animation](src/Images/indicators.gif)
+![Loading Animation](src/Images/skimmer.gif)
 
 
-## Getting Started
-```
-npm i react-native-indicator-kit --save
+### Installation
+```js
+npm i react-native-skeleton-skimmer --save
+cd ios && pod install
+cd android && ./gradlew clean
 ```
 or
+```js
+yarn add react-native-skeleton-skimmer
+cd ios && pod install
+cd android && ./gradlew clean
 ```
-yarn add react-native-indicator-kit
-```
-
-## Latest Release Version 
-## ```v1.0.0``` 
-
-
-
-## CircularLoader
-The `CircularLoader` component displays a circular animated loader with dots that expand and contract in a rhythmic sequence. It is customizable via props such as `size`, `color`, `number of dots`, and `dot size`.
-
-## Usage
-
-```javascript
-import { CircularLoader } from 'react-native-indicator-kit';
+### Usage
+```js
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import SkeletonSkimmer, { EanimationType } from 'react-native-skeleton-skimmer';
 
 const App = () => {
-    return (
-        <CircularLoader
-            size={30}      // Diameter of the loader
-            color="blue"   // Color of the dots
-            dotCount={8}  // Number of dots in the loader
-            dotSize={6}    // Diameter of each dot
-        />
-    );
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Loading...</Text>
+      {/* Basic usage of SkeletonSkimmer */}
+      <SkeletonSkimmer />
+
+      {/* Custom usage with different props */}
+      <SkeletonSkimmer
+        width={250}
+        height={40}
+        color="#D3D3D3"
+        highlightColor="#A9A9A9"
+        duration={3000}
+        animationType={EanimationType.bounce}
+        style={styles.customStyle}
+        animationStyle={styles.customAnimationStyle}
+      />
+    </View>
+  );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 24,
+    marginBottom: 20,
+  },
+  customStyle: {
+    marginTop: 20,
+    borderRadius: 5,
+  },
+  customAnimationStyle: {
+    opacity: 0.5,
+  },
+});
+
+export default App;
+
+ 
+
 ```
 
 
-
-
-## Props
-| Prop                  | Type | Description | Required | Default |
+### Properties
+|Prop	|Type	|Description	|Required	|Default|
 | ----------------------- | --- | ------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| size              | number  | Diameter of the loader container     | No  | 30 |
-| color              | string  | Color of the dots     | No  | 'white' |
-| dotCount              | number  | Number of dots in the circular animation     | No  | 8 |
-| dotSize              | number  | Diameter of each dot     | No  | 6 |
-
-
+|width	| number|	Width of the loader container	|No	|300|
+|height|	number|	Height of the loader container	|No	|30|
+|color	|string	|Background color of the loader container|	No	|'#E0E0E0'|
+|highlightColor|	string|	Color of the animated highlight effect	|No|	'#F7F7F7'|
+|style	|object|	Additional styles for the container|	No|	{}|
+|animationStyle	|object	|Additional styles for the animated highlight element|	No	|{}|
+|duration	|number|	Duration of the animation in milliseconds	|No|	2000|
+|animationType	|`EanimationType` (enum)|	Type of animation for the effect (linear, bounce, etc.)|	No	|`EanimationType.linear` |
 ---
 
+### `EanimationType` Enum Values
 
-## TextLoader
-The `TextLoader` component is an animated loader that displays a customizable number of dots scaling in a `wave-like effect`. Optionally, a content text can be displayed alongside the dots.
+The `EanimationType` enum defines the type of animation effect applied to the `SkeletonSkimmer`. Below are the available animation types:
 
+- **`linear`**: A smooth, continuous animation with a constant speed. (Default)
+- **`bounce`**: A bouncing animation that adds a playful effect.
+- **`circle`**: A circular animation, creating a rotating effect.
+- **`ease`**: A smooth easing animation that accelerates and decelerates in a natural motion (ease-in-out).
 
+### Contributing
 
-## Usage
+Contributions are always welcome! If you’d like to contribute, feel free to fork the repository and submit a pull request with your improvements.
 
-```javascript
-import { TextLoader } from 'react-native-indicator-kit';
+For bug reports, feature requests, or any issues, please open an issue on the GitHub repository or contact me directly at ashifalmohammed@gmail.com.
 
-const App = () => {
-    return (
-        <TextLoader
-            dotSize={4}              // Diameter of each dot
-            color="blue"             // Color of the dots
-            dotCount={3}             // Number of dots in the animation
-            content="Loading"        // Text to display before the dots
-            contentStyle={{ color: 'blue', fontWeight: 'bold' }} // Style for the content text
-        />
-    );
-};
-
-```
-
-
-
-
-## Props
-| Prop                  | Type | Description | Required | Default |
-| ----------------------- | --- | ------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dotSize              | number  | Diameter of each animated dot     | No  | 4 |
-| color              | string  | Color of the dots     | No  | 'white' |
-| dotCount              | string  | Number of animated dots in the loader     | No  | 3 |
-| content              | number  | Text to display before the animated dots     | No  | '' (empty) |
-| contentStyle              | object  | Style object to customize the appearance of content     | No  | {} |
-
-
----
-
-
-
-
-
-
-## EqualizerBarLoader
-The `EqualizerBarLoader` component displays an animated equalizer loader with bars that pulsate vertically, creating an effect similar to a music equalizer. It's customizable with several props.
-
-
-
-## Usage
-
-```javascript
-import { EqualizerBarLoader } from 'react-native-indicator-kit';
-
-const App = () => {
-    return (
-        <EqualizerBarLoader
-            barCount={6}        // Number of bars in the equalizer
-            size={80}           // Size of the loader
-            color="green"      // Color of the bars
-            barStyle={{ marginHorizontal: 8, }} // Custom style for each bar
-        />
-    );
-};
-
-```
-
-
-
-
-## Props
-| Prop                  | Type | Description | Required | Default |
-| ----------------------- | --- | ------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| barCount              | number  | Number of bars in the loader animation     | No  | 8 |
-| size              | number  | Size of the equalizer loader     | No  | 60 |
-| color              | string  | Color of the bars     | No  | 'white' |
-| barStyle              | object  | Custom styles for each individual bar     | No  | {} |
+Thank you for your interest in contributing!
 
 
 
@@ -144,7 +112,7 @@ const App = () => {
 [almdashif](https://github.com/almdashif)
 
 ## License
-[MIT Licensed](https://github.com/almdashif/react-native-indicator-kit/blob/main/LICENSE)
+[MIT Licensed](https://github.com/almdashif/react-native-skeleton-skimmer/blob/main/LICENSE) SkeletonSkimmer is under BSD license. © Mohammed Ashif  2024 - present
 
 
 

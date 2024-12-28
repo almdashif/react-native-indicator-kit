@@ -1,4 +1,2 @@
-import { CircularLoader, TextLoader, EqualizerBarLoader} from "./Components/Indicators";
-
-
-export { CircularLoader, TextLoader, EqualizerBarLoader }
+import SkeletonSkimmer from './Components/SkeletonSkimmer'
+export default SkeletonSkimmer

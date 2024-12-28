@@ -1,16 +1,16 @@
 {
-  "name": "react-native-indicator-kit",
-  "version": "1.0.0",
+  "name": "react-native-skeleton-skimmerss",
+  "version": "0.0.02",
   "description": "React Native UI Indicators / Loaders",
   "types": "dist/index.d.ts",
   "main": "src/index.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/almdashif/react-native-indicator-kit"
+    "url": "git+https://github.com/almdashif/react-native-skeleton-skimmer"
   },
   "keywords": [
     "android",
@@ -22,19 +22,22 @@
     "react-native-CircularLoader",
     "react-native-TextLoader",
     "react-native-EqualizerBarLoader",
-    "react-native-react-native-indicator-kit"
+    "react-native-react-native-skeleton-skimmer"
   ],
   "author": "Mohammed Ashif AL",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/almdashif/react-native-indicator-kit/issues"
+    "url": "https://github.com/almdashif/react-native-skeleton-skimmer/issues"
   },
-  "homepage": "https://github.com/almdashif/react-native-indicator-kit/blob/main/README.md",
+  "homepage": "https://github.com/almdashif/react-native-skeleton-skimmer/blob/main/README.md",
   "devDependencies": {
     "@react-native/typescript-config": "^0.76.3",
     "@types/jest": "^29.5.14",
     "@types/react": "^18.3.12",
     "@types/react-native": "^0.73.0",
+    "rollup": "^2.79.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.7.2"
   }
 }

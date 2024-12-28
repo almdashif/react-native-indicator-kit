@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
-    "jsx": "react", // For React projects
-    "lib": [
-      "dom",
-      "esnext"
-    ], // Include DOM libraries
-    "module": "esnext",  // Change to esnext or es2015 for compatibility
-    "target": "esnext",  // Target modern JavaScript for output
-    "types": ["jest"]
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react",   // Add this line for JSX support
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "isolatedModules": true
   },
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

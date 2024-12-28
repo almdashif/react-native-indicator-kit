@@ -1,1 +1,6 @@
 * /coverage
+
+src
+rollup.config.js
+.vscode
+react-native-skeleton-skimmer*.tgz

@@ -4,6 +4,10 @@
 
 # node.js
 #
-node_modules/
 npm-debug.log
 coverage
+
+.vscode
+dist
+node_modules
+react-native-skeleton-skimmer*.tgz
