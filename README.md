@@ -1,17 +1,14 @@
-#### React Native Skeleton Skimmer <img src="src/Images/tsLogo.png" alt="TS" width="26" />
-
 A Simple  Skeleton Loader with Skimmer effect in React Native  :fire: :rocket: :star2:
 
 ![npm](https://img.shields.io/npm/v/react-native-skeleton-skimmer) ![LICENSE MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)   [![NPM](https://static.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png)](https://www.npmjs.com/package/react-native-skeleton-skimmer/)
 
+![Loading Animation](https://github.com/user-attachments/assets/387419ac-547f-4b31-81b1-d9c69e64f9e0)
 
-
-![Loading Animation](src/Images/skimmer.gif)
 
 
 ### Installation
 ```js
-npm i react-native-skeleton-skimmer --save
+npm i react-native-skeleton-skimmer
 cd ios && pod install
 cd android && ./gradlew clean
 ```

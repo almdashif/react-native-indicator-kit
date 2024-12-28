@@ -1,9 +1,14 @@
 {
-  "name": "react-native-skeleton-skimmerss",
-  "version": "0.0.02",
+  "name": "react-native-skeleton-skimmer",
+  "version": "1.0.0",
   "description": "React Native UI Indicators / Loaders",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "main": "src/index.ts",
   "scripts": {
     "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,12 +22,12 @@
     "ios",
     "react-native",
     "react-native-cli",
-    "react-native-indicator",
-    "react-native-indicators",
-    "react-native-CircularLoader",
-    "react-native-TextLoader",
-    "react-native-EqualizerBarLoader",
-    "react-native-react-native-skeleton-skimmer"
+    "react-native-skeleton-skimmer",
+    "react-native-skeleton-loader",
+    "react-native-skeleton",
+    "react-native-skimmer",
+    "react-native-skimmers",
+    "react-native-loader"
   ],
   "author": "Mohammed Ashif AL",
   "license": "MIT",
